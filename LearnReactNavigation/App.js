@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { NavigationContainer  } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import HomeScreen from './screens/HomeScreens';
@@ -11,8 +11,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouterName="Home">
-        <Stack.Screen name="Home" component={HomeScreen}/>
-        <Stack.Screen name="Detail" component={DetailScreen}/>
+        <Stack.Screen name="Home" component={HomeScreen} options={{title:"홈"}}/>
+        <Stack.Screen name="Detail" component={DetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
